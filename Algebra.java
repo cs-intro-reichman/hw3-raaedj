@@ -59,6 +59,7 @@ public class Algebra {
 	public static int times(int x1, int x2) {
 		int result = x1;
 		if(x1 == 0 || x2 == 0 ){
+			result = 0;
 		}
 		else if(x1 > 0 && x2 > 0){
 	    result = x1;
