@@ -6,10 +6,10 @@
 public class Algebra {
 	public static void main(String args[]) {
 	    // Tests some of the operations
-	    System.out.println(plus(2,3));   // 2 + 3 = 5
-	    System.out.println(minus(7,2));  // 7 - 2 = 5
-   		System.out.println(minus(2,7));  // 2 - 7 = -5 
- 		System.out.println(times(3,4));  // 3 * 4 = 12
+	    System.out.println(plus(-2,-3));   // 2 + 3 = 5
+	    System.out.println(minus(-7,-2));  // 7 - 2 = 5
+   		System.out.println(minus(-2,7));  // 2 - 7 = -5 
+ 		System.out.println(times(3,-4));  // 3 * 4 = 12
    		System.out.println(plus(2,times(4,2)));  // 2 + 4 * 2 = 10
    		System.out.println(pow(5,3));      // 5^3 = 125 
    		System.out.println(pow(3,5));      // 3^5 = 243
@@ -25,8 +25,16 @@ public class Algebra {
 
 	// Returns x1 + x2
 	public static int plus(int x1, int x2) {
-		for(int i = 0; i < x2; i++){
-			x1++;
+		if(x2 > 0){
+			while(x2 > 0){
+				x1++;
+				x2--;
+			 }
+		}else{
+			while(x2 < 0){
+				x1--;
+				x2++;
+			 }
 		}
 		return x1;
 	}
