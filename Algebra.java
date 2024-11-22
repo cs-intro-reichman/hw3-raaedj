@@ -35,7 +35,7 @@ public class Algebra {
 	public static int minus(int x1, int x2) {
 		if(x2 > 0){
 			while(x2 > 0){
-				x1++;
+				x1--;
 				x2--;
 			 }
 		}else{
